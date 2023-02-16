@@ -10,28 +10,34 @@ body {
     opacity: .7;
 }
 .bg {
-    background-color: black;
+    background-color: gray;
+    position: relative;
     width: 100%;
     height: 100%;
 }
 .container {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100px;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.list {
-    height: 100px;
+.container ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-.block {
-    align-items: center;
-    justify-content: center;
-    display: flex;
+.container ul li {
+    display: inline-block;
     border-radius: 30px;
-    margin: 50% 0;
-    width: 100px;
-    height: 100px;
-    background-color: gray;
+    width: 120px;
+    height: 120px;
+    margin: 0 50px;
+}
+@media only screen and (max-width: 500px)
+{
+    .container ul li{
+        margin: 50px 0;
+        display: block;
+    }
 }
