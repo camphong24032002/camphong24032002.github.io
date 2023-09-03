@@ -15,29 +15,35 @@ body {
     width: 100%;
     height: 100%;
 }
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-.container ul {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.container ul li {
+.block {
     display: inline-block;
     border-radius: 30px;
     width: 120px;
     height: 120px;
-    margin: 0 50px;
 }
-@media only screen and (max-width: 500px)
+@media (max-width: 500px)
 {
-    .container ul li{
-        margin: 50px 0;
-        display: block;
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .block {
+        margin-bottom: 50px;
+    }
+}
+@media (min-width: 501px)
+{
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .block {
+        margin-right: 50px;
     }
 }
