@@ -4,7 +4,7 @@
 	list-style: none;
 }
 body {
-    background-image: url('./imgs/bg.jpg');
+    background-image: url('../imgs/bg.jpg');
     background-repeat: no-repeat, repeat;
     background-size: cover;
     opacity: .7;
