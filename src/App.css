@@ -1,0 +1,206 @@
+:root {
+  --primary-color: #000;
+  --primary-text: #FFA500;
+  --white: #fff;
+}
+
+.App-header{
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.info-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.project-box {
+  border: 1px solid var(--primary-color);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-text h1 {
+  color: var(--primary-text)
+}
+
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: var(--white);
+  color: var(--primary-color)
+}
+
+.project-text, .award-text {
+  text-align: justify;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .info {
+    color: var(--white);
+    background-color: var(--primary-color) ;
+    position: sticky;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .info-text {
+    width: 80%;
+  }
+
+  .contact {
+    margin-top: 10px;
+  }
+
+  .contact-icon {
+    margin: 0 20px;
+    font-size: 40px;
+  }
+
+  .content {
+    width: 70%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-box {
+    display: block;
+    margin-left: 20px;
+  }
+  
+  .content-header {
+    background-color: var(--primary-color);
+    color: var(--primary-text);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .content-detail {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .project-box {
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 20px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-text, .project-image {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--primary-color);
+  }
+
+  .skill-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1px;
+  }
+
+  .skill-box h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    user-select: none;
+  }
+  
+  .skill-component {
+    display: flex;
+    flex-wrap: wrap;
+    transition: max-height 0.1s ease, visibility 0.1s ease, color 0.1s ease;
+    max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .skill-box.selected .skill-component {
+    padding: 20px;
+    max-height: 100vh; /* adjust this value as needed */
+    transform: scaleY(1);
+    border: 1px solid var(--primary-color);
+    visibility: visible;
+  }
+
+  .skill-box.selected h3 {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white)
+  }
+
+  .skill-image {
+    object-fit: contain;
+    object-position: center;
+    min-width: 20%;
+    width: auto;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .award-box {
+    display: flex;
+    margin-bottom: 10px;
+    min-height: 150px;
+  }
+
+  .award-image{
+    width: 200px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  .award-text {
+    margin-left: 20px;
+  }
+}
