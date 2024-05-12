@@ -33,13 +33,13 @@ const projects = [
     title: 'Recommendation system',
     description: 'A system generates a list of products that most closely match the user\'s specifications in Python.',
     image: "project2",
-    link: ""
+    link: "https://huggingface.co/spaces/camphong/recommendation-system"
   },
   {
     title: 'ResNet fine-tuning',
     description: 'A simple project to fine-tune ResNet model on CIFAR-10 dataset. The primary objective involves modifying the model\'s architecture to suit the dataset and evaluating predictions.',
     image: "project3",
-    link: ""
+    link: "https://github.com/camphong24032002/Finetune-with-ResNet50"
   },
 ];
 
