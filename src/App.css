@@ -4,25 +4,9 @@
   --white: #fff;
 }
 
-.App-header{
-  display: flex;
-  width: 80vw;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.info-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
 .project-box {
   border: 1px solid var(--primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 10px;
 }
 
@@ -33,8 +17,8 @@
   text-align: center;
 }
 
-.info-text h1 {
-  color: var(--primary-text)
+.info-text {
+  width: 80%;
 }
 
 .resume-button {
@@ -55,6 +39,32 @@
   color: var(--primary-color)
 }
 
+.summary-background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.summary-box {
+  display: block;
+  background-color: var(--primary-color);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.summary-text {
+  width: 80%;
+  text-align: justify;
+}
+
 .project-text, .award-text {
   text-align: justify;
 }
@@ -63,7 +73,140 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1px;
+}
+
+.skill-box h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  user-select: none;
+}
+
+.skill-component {
+  display: flex;
+  flex-wrap: wrap;
+  transition: max-height 0.1s ease, visibility 0.1s ease, color 0.1s ease;
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.skill-box.selected .skill-component {
+  padding: 20px;
+  max-height: 100vh; /* adjust this value as needed */
+  transform: scaleY(1);
+  border: 1px solid var(--primary-color);
+  visibility: visible;
+}
+
+.skill-box.selected h3 {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white)
+}
+
+.skill-image {
+  object-fit: contain;
+  object-position: center;
+  min-width: 20%;
+  width: auto;
+  height: 100px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 1000px) {
+  .App-header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+  }
+  
+  .info {
+    display: none;
+  }
+
+  .content {
+    width: 100vw;
+    overflow: auto;
+  }
+
+  .content-box {
+    display: block;
+  }
+  
+  .content-header {
+    background-color: var(--primary-color);
+    color: var(--primary-text);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .content-detail {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .summary-box {
+    width: 80%;
+    height: 40%;  
+  }
+
+  .project-box {
+    color: inherit;
+    text-decoration: none;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .project-text, .project-image {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .award-box {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  .award-image{
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+  }
+  
+  .award-text {
+    padding: 0px 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .App-header{
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
   .info {
     color: var(--white);
     background-color: var(--primary-color) ;
@@ -76,13 +219,21 @@
     align-items: center;
   }
 
-  .info-image {
-    width: 300px;
-    height: 300px;
+  .info-text h1 {
+    color: var(--primary-text)
   }
 
-  .info-text {
-    width: 80%;
+  .info-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .info > .content-header {
+    display: none;
   }
 
   .contact {
@@ -118,10 +269,14 @@
     margin: 20px 0;
   }
 
+  .summary-box {
+    width: 60%;
+    height: 30%;  
+  }
+
   .project-box {
     color: inherit;
     text-decoration: none;
-    margin-bottom: 20px;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -136,56 +291,6 @@
     width: 100%;
     height: auto;
     border: 1px solid var(--primary-color);
-  }
-
-  .skill-box {
-    display: flex;
-    flex-direction: column;
-    margin-top: -1px;
-  }
-
-  .skill-box h3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px;
-    padding: 10px;
-    border: 1px solid var(--primary-color);
-    user-select: none;
-  }
-  
-  .skill-component {
-    display: flex;
-    flex-wrap: wrap;
-    transition: max-height 0.1s ease, visibility 0.1s ease, color 0.1s ease;
-    max-height: 0;
-    transform: scaleY(0);
-    transform-origin: top;
-    overflow: hidden;
-    visibility: hidden;
-  }
-
-  .skill-box.selected .skill-component {
-    padding: 20px;
-    max-height: 100vh; /* adjust this value as needed */
-    transform: scaleY(1);
-    border: 1px solid var(--primary-color);
-    visibility: visible;
-  }
-
-  .skill-box.selected h3 {
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
-    color: var(--white)
-  }
-
-  .skill-image {
-    object-fit: contain;
-    object-position: center;
-    min-width: 20%;
-    width: auto;
-    height: 100px;
-    margin: 0 auto;
   }
 
   .award-box {

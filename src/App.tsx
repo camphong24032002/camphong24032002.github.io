@@ -46,7 +46,7 @@ const projects = [
 const skills = [
   {
     title: 'Programming Languages',
-    components: ['python', 'cpp', 'julia', 'R'],
+    components: ['python', 'cpp', 'julia', 'R', 'js'],
   },
   {
     title: 'AI',
@@ -98,13 +98,7 @@ function App() {
           <img src={get_path("avatar")} alt="Profile" className="info-image"/>
           <div className="info-text">
             <h1>Thai Cam Phong</h1>
-            <h2>Data Scientist / AI Engineer</h2>
-            <p>I'm passionate about Computer Science as well as Data Science</p>
-          </div>
-          <div className="resume">
-            <a href="/static/resume.pdf" className="resume-button" target="_blank">
-              Resume
-            </a>
+            <h2>Data Science / AI Engineer</h2>
           </div>
           <div className="contact">
             {contacts.map((contact, index) => (
@@ -115,6 +109,21 @@ function App() {
           </div>
         </div>
         <div className="content">
+          <div className="content-box">
+            <div className="summary-background" style={{ backgroundImage: `url(${get_path("summary")})`}}>
+              <div className="summary-box">
+                <div className="summary-text">
+                  <h1>Hi! I'm Thai Cam Phong</h1>
+                  <p>I am deeply passionate about Computer Science and Data Science. They fuel my enthusiasm and drive for advancing knowledge and innovation.</p>
+                  <div className="resume">
+                    <a href="/static/resume.pdf" className="resume-button" target="_blank">
+                      Resume
+                    </a>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
           <div className="content-box">
             <div className="content-header">
               <h2>Projects</h2>
