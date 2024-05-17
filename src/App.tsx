@@ -69,8 +69,8 @@ const awards = [
     image: 'toeic',
   },
   {
-    title: 'Semester Scholarship',
-    description: 'Awarded to students with outstanding academic performance in 3 semesters.',
+    title: 'Scholarship In 3 Semesters',
+    description: 'Awarded to students with outstanding academic performance throughout the semester',
     image: 'hcmus',
   },
   {
