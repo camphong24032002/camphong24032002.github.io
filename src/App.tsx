@@ -54,7 +54,7 @@ const skills = [
   },
   {
     title: 'Data',
-    components: ['hadoop', 'spark', 'powerbi', 'tableau', 'mongodb', 'postgresql', 'sqlserver', 'pandas', 'numpy'],
+    components: ['hadoop', 'spark', 'powerbi', 'tableau', 'mongodb', 'postgresql', 'sqlserver', 'pandas', 'numpy', 'qdrant'],
   },
   {
     title: 'Software Engineering',
