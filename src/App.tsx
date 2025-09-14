@@ -46,7 +46,7 @@ const projects = [
 const skills = [
   {
     title: 'Programming Languages',
-    components: ['python', 'cpp', 'julia', 'R', 'js'],
+    components: ['python', 'cpp'],
   },
   {
     title: 'AI',
@@ -58,7 +58,7 @@ const skills = [
   },
   {
     title: 'Software Engineering',
-    components: ['reactjs', 'nodejs', 'flask', 'fastapi', 'github', 'postman'],
+    components: ['reactjs', 'nodejs', 'fastapi', 'github', 'postman'],
   },
 ]
 
