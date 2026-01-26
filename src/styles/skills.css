@@ -1,0 +1,156 @@
+.skills-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  
+  /* Header */
+  
+  .skills-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .skills-header p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    color: #9ca3af;
+  }
+  
+  /* List */
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Card */
+  
+  .skill-card {
+    background: linear-gradient(
+      145deg,
+      rgba(24, 24, 27, 0.9),
+      rgba(12, 12, 15, 0.9)
+    );
+  
+    border: 1px solid #27272a;
+    border-radius: 14px;
+  
+    overflow: hidden;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .skill-card.active {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.3);
+  }
+  
+  /* Header Button */
+  
+  .skill-header {
+    width: 100%;
+  
+    background: transparent;
+    border: none;
+  
+    color: #f9fafb;
+    font-size: 1rem;
+    font-weight: 600;
+  
+    padding: 16px 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    cursor: pointer;
+  
+    transition: background 0.2s;
+  }
+  
+  .skill-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  /* Content */
+  
+  .skill-content {
+    max-height: 0;
+    overflow: hidden;
+  
+    transition: max-height 0.4s ease;
+  }
+  
+  .skill-content.open {
+    max-height: 400px;
+  }
+  
+  /* Grid */
+  
+  .skill-grid {
+    padding: 20px 22px 26px;
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Item */
+  
+  .skill-item {
+    background: white;
+  
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+  
+    padding: 10px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    transition: all 0.25s ease;
+  }
+  
+  .skill-item img {
+    width: 70%;
+    height: 70%;
+  
+    max-width: 56px;
+    max-height: 56px;
+  
+    object-fit: contain;
+  
+    filter: grayscale(20%);
+    transition: all 0.25s ease;
+  }  
+  
+  .skill-item:hover {
+    border-color: #6366f1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+  }
+  
+  .skill-item:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 640px) {
+    .skills-header h2 {
+      font-size: 1.6rem;
+    }
+  
+    .skill-grid {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(50px, 1fr)
+      );
+    }
+  }
+  

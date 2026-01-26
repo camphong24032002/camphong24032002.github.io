@@ -1,0 +1,110 @@
+.awards-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  /* Header */
+  
+  .awards-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  .awards-header p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+  }
+  
+  /* Grid Layout */
+  
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  
+  /* Card */
+  
+  .award-card {
+    background: linear-gradient(
+      145deg,
+      rgba(24, 24, 27, 0.9),
+      rgba(12, 12, 15, 0.9)
+    );
+  
+    border: 1px solid #27272a;
+    border-radius: 16px;
+  
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+  
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .award-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border-color: #3f3f46;
+  }
+  
+  /* Image */
+  
+  .award-image-wrapper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: #020617;
+  }
+  
+  .award-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+    transition: transform 0.4s ease;
+  }
+  
+  .award-card:hover img {
+    transform: scale(1.08);
+  }
+  
+  /* Content */
+  
+  .award-content {
+    padding: 18px 20px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .award-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f9fafb;
+  }
+  
+  .award-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #9ca3af;
+  }
+  
+  /* Mobile */
+  
+  @media (max-width: 640px) {
+    .awards-header h2 {
+      font-size: 1.6rem;
+    }
+  
+    .award-image-wrapper {
+      height: 140px;
+    }
+  }
+  
